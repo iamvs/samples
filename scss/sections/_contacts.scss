@@ -1,0 +1,14 @@
+#contacts {
+    .wrap {
+
+        @media screen and (min-width: $medium) {
+            display: flex;
+            justify-content: space-between;                
+        }
+        
+        .column {
+            text-align: center;
+            margin: rem(25px) 0;
+        }
+    }
+}

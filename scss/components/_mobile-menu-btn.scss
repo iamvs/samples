@@ -1,0 +1,30 @@
+button#mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $blue-color;
+    border-radius: rem(50px);
+    border: 0 none;
+    color: $superwhite-color;
+    height: rem(50px);
+    width: rem(50px);
+    right: 20px;
+    bottom: 55px;
+    position: fixed;
+    box-shadow: 3px 3px 10px rgba(36,37,38,.5);
+    outline: none !important;
+    user-select: none;
+    z-index: 100;
+    cursor: pointer;
+    .icon {
+        display: block;
+        font-size: rem(21px);
+        line-height: rem(21px);
+        height: rem(21px);
+        width: rem(21px);
+    }
+
+    @media screen and (min-width: $medium) {
+        display: none;
+    }
+}

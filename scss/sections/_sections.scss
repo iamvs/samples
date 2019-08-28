@@ -1,0 +1,17 @@
+#content {
+    .container {
+        .section {
+            padding: rem(90px) 0;
+            &.active {
+                display: block !important;
+            }
+            
+            @media screen and (min-width: $medium) {
+                padding: rem(90px) rem(45px);
+            }            
+        }
+        @import 'gallery';
+        @import 'adoption';
+        @import 'contacts';
+    }
+}

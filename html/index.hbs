@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+		<meta name="keywords" content="Pet adoption agency">		
+		<meta name="description" content="We are a pet adoption agency that helps thousands of pet find homes. Adopt a pet and save a life!">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Pet Adoption Agency</title>
+		<link rel="icon" href="/favicon.ico"> 
+		<link rel="stylesheet" href="{{ cssPath "app.css" }}">             
+	</head>
+	<body>
+
+		<noscript>
+			<p class="warning">To see our pets gallery, please turn on JavaScript in your browser! <a target="_blank" rel="nofollow" href="https://www.google.com/search?q=how+to+enable+javascript+in+my+browser">How?</a></p>
+		</noscript> 
+
+		<header id="header">
+			<div class="container">
+				<a class="logo" href="/">Pet Adoption Agency</a>
+				<nav class="nav">
+					<a class="nav-link nojs" href="#gallery">Gallery</a>
+					<a class="nav-link" href="#adoption">Adoption</a>
+					<a class="nav-link" href="#contacts">Contacts</a>
+				</nav>  							
+			</div>
+		</header>
+
+		<div id="content">
+			<div class="container">
+				{{> gallery}}
+				{{> adoption}}
+				{{> contacts}}     
+			</div>
+		</div>
+ 
+		<div id="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close-button">&#10006;</span> 
+					<span class="name"></span>
+				</div>
+				<div class="modal-body"></div>
+			</div>
+		</div>		
+
+		<button id="mobile-menu" class="nojs">
+			<span class="icon">&#9776;</span>
+		</button>	
+
+        <footer id="footer">
+            <p>Pet Adoption Agency. 2019</p>
+        </footer>    			
+
+		<script src="{{ jsPath "app.js" }}"></script>      
+	</body>
+</html>

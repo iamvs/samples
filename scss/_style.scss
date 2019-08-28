@@ -1,0 +1,72 @@
+/* Globals */      
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700');
+
+:root {
+    --font-sans: Rubik, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-serif: Georgia, serif;
+    --color-secondary: #333;
+
+    font-family: var(--font-sans);
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+html {
+    position: relative;
+    min-height: 100%;    
+}
+
+body {  
+    background: $snow-color;
+    margin: 0 0 calc(#{$footer-height} + 20px); 
+}
+
+.container {
+    border: 0 none;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1920px;
+    width: calc(100% - 64px);
+}
+
+a {
+    color: $blue-color;
+}
+
+a:focus,
+button:focus {
+    outline: none;
+}
+
+.heading { 
+  margin: 0 0 rem(8px);
+  font-family: inherit;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $darkgray-color;
+}
+
+.show {
+    display: block;
+}
+
+.warning {
+    background: $yellow-color;
+    padding: rem(15px);
+    margin: rem(55px) 0 0;
+}
+
+.nojs {
+    display: none !important;
+}
+
+
+@import 'components/header';
+@import 'components/modal';
+@import 'components/mobile-menu-btn';
+@import 'components/footer';
+@import 'sections/sections';
+
+ 
+
+

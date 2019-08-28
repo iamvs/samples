@@ -1,0 +1,86 @@
+#gallery {
+    .intro {
+        text-align: center;
+        p {
+            color: $lightgray-color;
+        }
+    }
+    #pets {
+        .wrap {
+            display: flex;
+            flex-wrap: wrap;    
+            align-content: space-between;
+            .pet {
+                background: $superwhite-color;
+                border-radius: rem(8px);
+                width: 100%;
+                margin: rem(15px);
+                padding: rem(25px);  
+                box-shadow: 0 6px 15px rgba(36,37,38,0.08);
+                cursor: pointer;
+                transition: all .25s ease-in-out;  
+                
+                @media screen and (min-width: $small) {
+                    width: calc(50% - 80px);     
+                }                  
+                @media screen and (min-width: $large) {
+                    width: calc(33.3% - 80px);     
+                }    
+                @media screen and (min-width: $wide) {
+                    width: calc(25% - 80px);     
+                }    
+                                                    
+                &:hover {
+                    box-shadow: 5px 12px 20px rgba(36,37,38,0.13);
+                }      
+                .img {
+                    background: url('/assets/images/placeholder.gif') no-repeat scroll center center / cover;
+                    border-radius: rem(100px);
+                    height: 200px;
+                    max-width: 200px;  
+                    margin: 0 auto rem(15px);
+                }
+                .name {
+                    text-align: center;
+                    margin: 0;
+                }
+            }    
+  
+        }
+        .current-page {
+            color: $midnight-color;
+            font-size: .8125rem;
+            text-align: center;
+            margin: 2.5rem 0 0;
+        }  
+        #pagination {
+            text-align: center;
+            ul {
+                border: 1px solid $gray-color;
+                border-radius: rem(4px);
+                display: inline-block;
+                padding-left: 0;
+                list-style: none;            
+                li {
+                    border-right: 1px solid $gray-color;
+                    color: $blue-color;
+                    display: inline-block;
+                    width: rem(30px);
+                    font-size: rem(16px);
+                    font-weight: 500;
+                    text-align: center;
+                    padding: rem(10px);
+                    cursor: pointer;
+                    &.active {
+                        background: lighten($gray-color, 10);
+                        color: $lightgray-color;
+                        cursor: initial;
+                    }
+                    &:last-child {
+                        border-right: 0;
+                    }
+                }                
+            }
+        }                 
+    }      
+}

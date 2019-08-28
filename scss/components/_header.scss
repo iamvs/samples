@@ -1,0 +1,95 @@
+/* Header */
+#header {
+    background: $superwhite-color;
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    box-shadow: 0 6px 15px rgba(36,37,38,0.08);
+    z-index: 100;  
+    transition: opacity .2s;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: $header-height;       
+        
+        @media screen and (min-width: $medium) {
+            justify-content: space-between;
+        }        
+    }
+    a.logo {
+        color: $blue-color;
+        font-size: rem(18px);
+        font-weight: 500;
+        text-decoration: none;
+        line-height: normal;
+    }     
+    .nav {
+        display: none;
+        &.open {
+            display: block;
+            bottom: 100px;
+            right: 25px;
+            position: fixed;    
+            &::before {
+                content: "";
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                position: fixed;
+            }        
+            a.nav-link {
+                display: block;
+                background: $blue-color;
+                border-radius: rem(8px);
+                color: $superwhite-color;
+                margin: rem(15px) 0;
+                padding: rem(10px) rem(25px);
+                text-decoration: none;
+                position: relative;
+                &.active {
+                    background: darken($blue-color, 25%);
+                }
+            }
+        }
+        
+        @media screen and (min-width: $medium) {
+            display: block;
+            &:hover {
+                a.nav-link {
+                    opacity: .5;
+                    transition: all .5s;     
+                    &.active::after {
+                        opacity: .4;
+                        transition: all .5s; 
+                    }       
+                }
+            }          
+            a.nav-link {
+                color: $blue-color;
+                display: inline-flex;
+                align-items: center;
+                height: inherit;
+                font-size: rem(14px);
+                font-weight: 500;
+                margin: 0 rem(10px);
+                text-decoration: none;
+                position: relative;
+                transition: all .5s; 
+                &.active::after {
+                    content: "";
+                    background: $yellow-color;
+                    height: 2px;
+                    width: 100%;
+                    bottom: -1px;
+                    left: 0;
+                    position: absolute;
+                }
+                &:hover {
+                    opacity: 1;
+                }      
+            }              
+        }      
+    }    
+}
